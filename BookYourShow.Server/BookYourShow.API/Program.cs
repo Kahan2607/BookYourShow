@@ -1,6 +1,8 @@
+using BookYourShow.Application.DTOs;
 using BookYourShow.Domain;
 using BookYourShow.Infrastructure;
 using Microsoft.AspNetCore.Identity;
+// using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,8 @@ builder.Services.AddOpenApi();
 builder.Services.AddIdentity<User, Role>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders();
+
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();
 
