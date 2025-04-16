@@ -28,9 +28,9 @@ public class AuthRepository : IAuthRepository
         return result;
     }
 
-    public async Task AddRoleAsync(User user)
+    public async Task<IdentityResult> AddRoleAsync(User user)
     {
-        await _userManager.AddToRoleAsync(user, "User");
+        return await _userManager.AddToRoleAsync(user, "User");
     }
 
     public async Task<IList<string>> GetRoleAsync(User user)

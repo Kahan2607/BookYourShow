@@ -9,7 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 
 namespace BookYourShow.Infrastructure.Authentication;
 
-public class JwtTokenGenerator : IJWTTokenGenerator
+public class JwtTokenGenerator : IJwtTokenGenerator
 {
     private readonly IConfiguration _configuration;
 

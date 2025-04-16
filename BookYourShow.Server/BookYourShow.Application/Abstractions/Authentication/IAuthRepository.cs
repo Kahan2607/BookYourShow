@@ -8,6 +8,6 @@ public interface IAuthRepository
 {
     public Task<IdentityResult> RegisterAsync(User user, string password);
     // Task LoginAsync(string email, string password);
-    public Task AddRoleAsync(User user);
+    public Task<IdentityResult> AddRoleAsync(User user);
     public Task<IList<string>> GetRoleAsync(User user);
 }
